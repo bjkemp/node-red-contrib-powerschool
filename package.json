@@ -1,0 +1,42 @@
+{
+  "name": "@tesd/node-red-contrib-powerschool",
+  "version": "2022.11.08.0",
+  "description": "Interact with the PowerSchool API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predev": "npm i -g",
+    "dev": "node-red -v"
+  },
+  "author": "Benjamin Kemp",
+  "contributors": [
+    {
+      "name": "Benjamin Kemp",
+      "email": "bjkemp@gmail.com"
+    }
+  ],
+  "keywords": [
+    "node-red",
+    "contrib-powerschool",
+    "powerschool",
+    "ps"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bjkemp/node-red-contrib-powerschool"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "node-red": {
+    "nodes": {
+      "powerschool-token": "powerschool-token.js",
+      "powerschool-request": "powerschool-request.js",
+      "powerschool-client": "powerschool-client.js"
+    }
+  },
+  "publishConfig": {
+    "@bjkemp:registry": "https://npm.pkg.github.com"
+  }
+}
