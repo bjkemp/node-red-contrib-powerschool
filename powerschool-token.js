@@ -1,12 +1,12 @@
-const axios = require( 'axios' );
-const https = require( 'https' );
+import { create } from 'axios';
+import { Agent } from 'https';
 
 var _internals = {};
 
 _internals.getToken = function (creds, cb) {
 
-	const instance = axios.create({
-		httpsAgent: new https.Agent({  
+	const instance = create({
+		httpsAgent: new Agent({  
 			rejectUnauthorized: creds.ssl_reject
 		})
 	});
@@ -35,7 +35,7 @@ _internals.getToken = function (creds, cb) {
 	
 };
 
-module.exports = function(RED) {
+export default function(RED) {
 	'use strict';
 
 	function Node(n) {
