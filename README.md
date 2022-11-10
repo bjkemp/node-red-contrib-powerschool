@@ -4,7 +4,7 @@ A set of nodes which connect to and interact with the PowerSchool API.
 
 ## Installation
 
-`npm install node-red-contrib-powerschool`
+`npm install @tesd/node-red-contrib-powerschool`
 
 ## Quick Start
 
@@ -16,5 +16,5 @@ Add a PS Token node and configure the connection settings. This adds the attribu
 
 ## Implemented Nodes
 
- * PS Token - Generate a new PowerSchool API Token
- * PS Request - Send an authenticated request to the PowerSchool API
+* PS Token - Generate a new PowerSchool API Token
+* PS Request - Send an authenticated request to the PowerSchool API

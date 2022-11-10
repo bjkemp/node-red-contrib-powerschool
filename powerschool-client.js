@@ -1,4 +1,4 @@
-export default function(RED) {
+module.exports = function(RED) {
     function RemoteServerNode(n) {
         RED.nodes.createNode(this,n);
         this.powerschool_host = n.powerschool_host;

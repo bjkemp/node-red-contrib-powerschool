@@ -1,12 +1,12 @@
-import { create } from 'axios';
-import { Agent } from 'https';
+const axios = require( 'axios' );
+const https = require( 'https' );
 
 var _internals = {};
 
 _internals.sendRequest = function ( ps_api, method, url, data, done, token ) {
 
-	const instance = create({
-		httpsAgent: new Agent({  
+	const instance = axios.create({
+		httpsAgent: new https.Agent({  
 			rejectUnauthorized: creds.ssl_reject
 		})
 	});
@@ -37,7 +37,7 @@ _internals.sendRequest = function ( ps_api, method, url, data, done, token ) {
 	
 };
 
-export default function(RED) {
+module.exports = function(RED) {
 	'use strict';
 
 	// From @node-red/nodes/core/function/10-switch.js
