@@ -7,7 +7,7 @@ _internals.getToken = function (creds, cb) {
 
 	const instance = axios.create({
 		httpsAgent: new https.Agent({  
-			rejectUnauthorized: creds.ssl_reject
+			rejectUnauthorized: false //creds.ssl_reject
 		})
 	});
 	

@@ -7,7 +7,7 @@ _internals.sendRequest = function ( ps_api, method, url, data, done, token ) {
 
 	const instance = axios.create({
 		httpsAgent: new https.Agent({  
-			rejectUnauthorized: creds.ssl_reject
+			rejectUnauthorized: false // creds.ssl_reject
 		})
 	});
 
