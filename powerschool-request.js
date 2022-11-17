@@ -3,11 +3,16 @@ const https = require( 'https' );
 
 var _internals = {};
 
-_internals.sendRequest = function ( ps_api, method, url, data, done, token ) {
+_internals.sendRequest = function ( ps_api, method, url, data, done, token, creds ) {
+	var ssl_reject = true;
+
+	if ( creds.ssl_reject == 'false' ) {
+		ssl_reject = false;
+	}
 
 	const instance = axios.create({
 		httpsAgent: new https.Agent({  
-			rejectUnauthorized: false // creds.ssl_reject
+			rejectUnauthorized: ssl_reject
 		})
 	});
 
